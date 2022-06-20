@@ -94,6 +94,11 @@ const shuffleFruits = () => {
     //console.log(result)
   }
 
+  // Вероятность совпадения крайне мала, но тем не менее добавим код для этого
+  if (fruits.join()===result.join()){
+    alert("Порядок фруктов не изменился! Попробуйте ещё раз!")
+  }
+
   fruits = result;
 };
 
