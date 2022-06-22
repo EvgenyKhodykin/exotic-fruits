@@ -115,9 +115,9 @@ shuffleButton.addEventListener('click', () => {
 
 // фильтрация массива
 const filterFruits = () => {
-  fruits.filter((item) => {
+  fruits = fruits.filter(item => {
     // TODO: допишите функцию
-    item.weight<20 && item.weight>10
+    return item.weight>minWeightInput.value && item.weight<maxWeightInput.value
   });
 };
 
