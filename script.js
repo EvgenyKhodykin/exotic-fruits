@@ -117,6 +117,7 @@ shuffleButton.addEventListener('click', () => {
 const filterFruits = () => {
   fruits.filter((item) => {
     // TODO: допишите функцию
+    item.weight<20 && item.weight>10
   });
 };
 
@@ -124,6 +125,7 @@ filterButton.addEventListener('click', () => {
   filterFruits();
   display();
 });
+    
 
 /*** СОРТИРОВКА ***/
 
