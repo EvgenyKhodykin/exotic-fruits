@@ -46,6 +46,7 @@ input {
   background-color: #3cbc8d;
   color: white;
   max-width: 200px;
+  font-size: 15px;
 }
 
 main {
