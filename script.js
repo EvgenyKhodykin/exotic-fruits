@@ -151,49 +151,7 @@ const sortAPI = {
 
   quickSort(arr, comparation) {
     // TODO: допишите функцию быстрой сортировки
-    function swap(items, firstIndex, secondIndex){
-      const temp = items[firstIndex]
-      items[firstIndex] = items[secondIndex]
-      items[secondIndex] = temp
-   }
-   function partition(items, left, right) {
-    const pivot = items[Math.floor((right + left) / 2)]
-        let i = left
-        let j = right
-        console.log(i)
-        console.log(items[i])
-    while (i <= j) {
-        while (!comparation(items[i], pivot)) {
-            i++;
-        }
-        while (comparation(items[j], pivot)) {
-            j--;
-        }
-        if (i <= j) {
-            swap(items, i, j)
-            i++;
-            j--;
-        }
-    }
-    return i
- }
- function doSort(items, left, right) {
-  let index;
-  if (items.length > 1) {
-      left = typeof left != "number" ? 0 : left;
-      right = typeof right != "number" ? items.length - 1 : right;
-      index = partition(items, left, right);
-      if (left < index - 1) {
-          doSort(items, left, index - 1);
-      }
-      if (index < right) {
-          doSort(items, index, right);
-      }
-  }
-  //return items;
-}
-  doSort(arr, 0, arr.length-1)
-    
+    arr.sort(comparation) 
   },
 
   // выполняет сортировку и производит замер времени
